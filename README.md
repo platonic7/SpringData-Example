@@ -2,5 +2,4 @@
 
 This project is a example project. 
 
-![ScreenShot](https://github.com/platonic7/enjoySkate/blob/master/src/main/webapp/resources/image/loginTest.png)
-
+![ScreenShot](https://github.com/platonic7/SpringData-Example/blob/master/src/main/webapp/resources/image/list.png)
