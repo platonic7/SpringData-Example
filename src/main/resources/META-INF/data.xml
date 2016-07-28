@@ -13,8 +13,8 @@
         <!-- MySQL URL Configuration -->
         <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
         p:driverClassName="com.mysql.jdbc.Driver"
-        p:url="jdbc:mysql://127.0.0.1:3306/springex1" 
-        p:username="root" p:password="2378" 
+        p:url="jdbc:mysql://127.0.0.1:3306/ " 
+        p:username="root" p:password=" " 
         p:maxWait="-1" 
         p:maxIdle="5" 
         p:minIdle="5" 
