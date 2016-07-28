@@ -10,17 +10,17 @@
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-        <!-- MySQL URL Setting -->
+        <!-- MySQL URL Configuration -->
         <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
         p:driverClassName="com.mysql.jdbc.Driver"
-        p:url="jdbc:mysql://127.0.0.1:3306/" 
-        p:username="root" p:password="" 
+        p:url="jdbc:mysql://127.0.0.1:3306/springex1" 
+        p:username="root" p:password="2378" 
         p:maxWait="-1" 
         p:maxIdle="5" 
         p:minIdle="5" 
         p:maxActive="5"
         p:initialSize="5" 
-                 />
+        />
 
         <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
                 id="entityManagerFactory" p:jpaVendorAdapter-ref="hibernateVendor"
@@ -35,18 +35,24 @@
                    </props>
                 </property>
         </bean>
+        
          <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
-                id="hibernateVendor" 
-                p:showSql="false" 
-                p:generateDdl="true"
-                p:databasePlatform="org.hibernate.dialect.MySQL5Dialect" 
-                p:database="MYSQL" />
-        <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager" 
-        p:entityManagerFactory-ref="entityManagerFactory" />
+               id="hibernateVendor" 
+               p:showSql="false" 
+               p:generateDdl="true"
+               p:databasePlatform="org.hibernate.dialect.MySQL5Dialect" 
+               p:database="MYSQL" 
+         />
+        <bean class="org.springframework.orm.jpa.JpaTransactionManager" 
+          	  id="transactionManager" 
+        	  p:entityManagerFactory-ref="entityManagerFactory" />
+        	  
         <tx:annotation-driven transaction-manager="transactionManager" />
+        
         <jpa:repositories transaction-manager-ref="transactionManager" 
-        entity-manager-factory-ref="entityManagerFactory" 
-        base-package="com.platoniccompany.springblog.repository" />
+        				  entity-manager-factory-ref="entityManagerFactory" 
+        				  base-package="com.platoniccompany.springblog.repository"
+         />
 </beans>
 
 
