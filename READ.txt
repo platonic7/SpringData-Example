@@ -1,0 +1,8 @@
+# link 먹인 css, js 등등이 안먹고 주소가 맞지 않는다면 localhost:8080/xxxx/home <-- 프로젝트 이름이 나오는지 확인.
+# Tomcat 설정에서 path 확인 후 프로젝트 이름 "/" 지워준다.
+
+# data.xml 에서 데이터베이스 세팅해주기.
+# @Service injection 이 제대로 안된다면 servlet-context.xml 의 스캔되고 있는 부분 다시 지정해주기.
+Ex) <context:component-scan base-package="com.platoniccompany.springblog.service" />
+
+# security-context.xml 파일을 추가 하기나 다른 설정을 추가한다면 root-context.xml에서 import 확인.
