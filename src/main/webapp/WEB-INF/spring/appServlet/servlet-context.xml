@@ -30,10 +30,9 @@
 			p:useCacheControlNoStore="true"/>
 		<beans:bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang" />
 	</interceptors>
-		
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-	</beans:bean>
+	
 	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0"/>
+	
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:order="1">	
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
