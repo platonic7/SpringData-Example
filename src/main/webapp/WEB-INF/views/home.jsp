@@ -3,9 +3,11 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" href="/resources/bootstrap/bootstrap.min.css">
+ 	<link rel="stylesheet" href="/resources/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="/resources/bootstrap/bootstrap.min.js">
 	
+	<!-- <link rel="stylesheet" href="/webjars/bootstrap/3.3.4/dist/css/bootstrap.min.css"> -->
+
 	<!-- Paging Setting -->
 	<c:url var="firstUrl" value="?page=0" />
 	<c:url var="lastUrl" value="?page=${boardPage.totalPages - 1}" />
@@ -100,5 +102,9 @@
 				<br><br>	
 			<a href="/write" class="btn btn-info" role="button">&nbsp;&nbsp;Go Write&nbsp;&nbsp;</a>
 		</div>
+		
+	<!-- 	<script src="/webjars/jquery/2.1.3/dist/jquery.min.js"></script>
+		<script src="/webjars/bootstrap/3.3.4/dist/js/bootstrap.min.js"></script> -->
+		
 	</body>
 </html>

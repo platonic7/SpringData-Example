@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 public class Board implements Serializable {
 
@@ -20,7 +23,8 @@ public class Board implements Serializable {
 	private String title;
 	private String content;
 	private int count;
-
+	
+	
 	public Long getId() {
 		return id;
 	}
